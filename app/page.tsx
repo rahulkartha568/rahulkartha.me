@@ -1,10 +1,13 @@
+"use client";
+
 import Image from "next/image";
+import TypingEffect from "@/components/typingeffect";
 
 export default function Home() {
   return (
     <div
       style={{
-        backgroundImage: "url('/background-image.jpg')",
+        //backgroundImage: "url('/background-image.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
@@ -17,12 +20,19 @@ export default function Home() {
         padding: "20px",
       }}
     >
-      <h1 style={{ fontSize: "3rem", marginBottom: "20px" }}>Rahul Kartha</h1>
-      <p style={{ fontSize: "1.5rem", marginBottom: "40px" }}>
-        Explore my work and get to know me!
+      <TypingEffect />
+
+      <p
+        style={{
+          marginBottom: "40px",
+          fontFamily: "monospace",
+          paddingRight: 4,
+          color: "black",
+          fontSize: "4rem",
+        }}
+      >
       </p>
       <div>
-        <h2 style={{ fontSize: "2rem", marginBottom: "20px" }}>Contact Me</h2>
         <ul
           style={{
             display: "flex",
@@ -38,7 +48,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Image
-                src="app/images/linkedin.png"
+                src="/images/linkedin.png"
                 alt="LinkedIn"
                 width={40}
                 height={40}
@@ -48,7 +58,7 @@ export default function Home() {
           <li>
             <a href="mailto:rahulkartha2002@gmail.com">
               <Image
-                src="app/images/black-gmail-icon.png"
+                src="/images/black-gmail-icon.png"
                 alt="Email"
                 width={40}
                 height={40}
@@ -62,7 +72,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/twitter-icon.png"
+                src="/images/x-logo.jpg"
                 alt="Twitter"
                 width={40}
                 height={40}
